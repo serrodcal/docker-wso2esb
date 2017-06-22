@@ -9,10 +9,11 @@ LABEL org.label-schema.vcs-ref=$VCS_REF \
 RUN wget -P /opt https://s3-us-west-2.amazonaws.com/wso2-stratos/wso2esb-${ESB_VERSION}.zip && \
     apt-get update && \
     apt-get install -y zip && \
+    apt-get install -y vim && \
     apt-get clean && \
     unzip /opt/wso2esb-${ESB_VERSION}.zip -d /opt && \
     rm /opt/wso2esb-${ESB_VERSION}.zip
 
-EXPOSE 9443 9763 8243 8280
+EXPOSE 9443 9763 8243 8280 19444
 WORKDIR /opt/wso2esb-${ESB_VERSION}
 ENTRYPOINT ["bin/wso2server.sh"]
