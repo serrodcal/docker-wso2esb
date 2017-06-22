@@ -16,8 +16,8 @@ The Dockerfile will:
 
 ## Usage
 To run the WSO2 ESB:
-```sh
-docker run -d --name esb -p 9443:9443 8280:8280 8243:8243 19444:19444 isim/wso2esb
+```
+docker run -d --name esb -p 9443:9443 8280:8280 8243:8243 19444:19444 serrodcal/wso2esb-5.0.0
 ````
 To access web admin console, navigate to `https://localhost:9443` using your web browser.
 
