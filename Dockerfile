@@ -9,9 +9,10 @@ RUN wget -P /opt https://s3-us-west-2.amazonaws.com/wso2-stratos/wso2esb-${ESB_V
     apt-get clean && \
     unzip /opt/wso2esb-${ESB_VERSION}.zip -d /opt && \
     rm /opt/wso2esb-${ESB_VERSION}.zip && \
-    mkdir /opt/artifacts
+    mkdir /opt/artifacts && \
 
 COPY bin/wso2server.sh /opt/wso2esb-5.0.0/bin/wso2server.sh
+COPY lib/* /opt/wso2esb-5.0.0/repository/components/lib
 COPY dropins/* /opt/wso2esb-5.0.0/repository/components/dropins/
 COPY artifacts/* /opt/artifacts/
 
