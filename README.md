@@ -15,13 +15,29 @@ The Dockerfile will:
 * Be able to deploy mediators (in artifacts/), dropins and libs.
 
 ## Usage
+
+Clone this repo in your local.
+
+Build image:
+
+```
+docker build -t serrodcal/wso2esb-5.0.0 .
+```
+
 To run the WSO2 ESB:
+
 ```
 docker run -d --name esb -p 9443:9443 -p 8280:8280 -p 8243:8243 -p 19444:19444 serrodcal/wso2esb-5.0.0
 ````
 To access web admin console, navigate to `https://localhost:9443` using your web browser.
 
 To access OSGi Console, type `telnet localhost 19444` in console.
+
+## Deploying your mediators
+
+Copy mediators `.jar` files into /artifacts, Apache Felix works for us.
+
+If you need dropins or libs for the mediator put them in dropins/ or lib/. 
 
 ## License
 Refer to the [LICENSE](LICENSE) file. WSO2 license can be found [here](http://wso2.com/licenses).
