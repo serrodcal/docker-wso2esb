@@ -12,7 +12,7 @@ RUN wget -P /opt https://s3-us-west-2.amazonaws.com/wso2-stratos/wso2esb-${ESB_V
     rm /opt/wso2esb-${ESB_VERSION}.zip && \
     mkdir /opt/artifacts
 
-COPY filesToCP/wso2server.sh /opt/wso2esb-5.0.0/bin/wso2server.sh
+COPY bin/wso2server.sh /opt/wso2esb-5.0.0/bin/wso2server.sh
 COPY artifacts/* /opt/artifacts/
 COPY dropins/* /opt/wso2esb-5.0.0/repository/components/dropins/
 
