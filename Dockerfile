@@ -1,7 +1,6 @@
 FROM isim/oraclejava:1.8.0_101
 
 ARG ESB_VERSION=${VERSION:-5.0.0}
-ARG VCS_REF
 
 RUN wget -P /opt https://s3-us-west-2.amazonaws.com/wso2-stratos/wso2esb-${ESB_VERSION}.zip && \
     apt-get update && \
@@ -13,8 +12,8 @@ RUN wget -P /opt https://s3-us-west-2.amazonaws.com/wso2-stratos/wso2esb-${ESB_V
     mkdir /opt/artifacts
 
 COPY bin/wso2server.sh /opt/wso2esb-5.0.0/bin/wso2server.sh
-COPY artifacts/* /opt/artifacts/
 COPY dropins/* /opt/wso2esb-5.0.0/repository/components/dropins/
+COPY artifacts/* /opt/artifacts/
 
 EXPOSE 9443:9443 9763:9763 8243:8243 8280:8280 19444:19444
 WORKDIR /opt/wso2esb-${ESB_VERSION}
