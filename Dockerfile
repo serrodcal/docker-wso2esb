@@ -15,6 +15,6 @@ COPY bin/wso2server.sh /opt/wso2esb-5.0.0/bin/wso2server.sh
 COPY dropins/* /opt/wso2esb-5.0.0/repository/components/dropins/
 COPY artifacts/* /opt/artifacts/
 
-EXPOSE 9443:9443 9763:9763 8243:8243 8280:8280 19444:19444
+EXPOSE 9443 9763 8243 8280 19444
 WORKDIR /opt/wso2esb-${ESB_VERSION}
 ENTRYPOINT ["bin/wso2server.sh"]
