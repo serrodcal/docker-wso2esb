@@ -11,6 +11,8 @@ RUN wget -P /opt https://s3-us-west-2.amazonaws.com/wso2-stratos/wso2esb-${ESB_V
     unzip /opt/wso2esb-${ESB_VERSION}.zip -d /opt && \
     rm /opt/wso2esb-${ESB_VERSION}.zip
 
+COPY filesToCP/wso2server.sh /opt/wso2esb-5.0.0/bin/wso2server.sh
+
 EXPOSE 9443 9763 8243 8280 19444
 WORKDIR /opt/wso2esb-${ESB_VERSION}
 ENTRYPOINT ["bin/wso2server.sh"]
