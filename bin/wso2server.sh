@@ -314,7 +314,7 @@ do
     -Dcom.ibm.cacheLocalHost=true \
     -DworkerNode=false \
     -DosgiConsole=19444 \
-    -Dfelix.felixinstall.dir=/opt/artifacts
+    -Dfelix.felixinstall.dir=/opt/artifacts \
     org.wso2.carbon.bootstrap.Bootstrap $*
     status=$?
 done
