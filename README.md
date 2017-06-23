@@ -40,5 +40,15 @@ Copy mediators `.jar` files into /artifacts, Apache Felix works for us.
 
 If you need dropins or libs for the mediator put them in dropins/ or lib/.
 
+## Test
+
+```
+curl -i -X POST \
+   -H "Content-Type:application/json" \
+   -d \
+'{"example":"example"}' \
+ 'http://localhost:8280/echo/echo'
+```
+
 ## License
 Refer to the [LICENSE](LICENSE) file. WSO2 license can be found [here](http://wso2.com/licenses).
