@@ -12,7 +12,7 @@ RUN wget -P /opt https://s3-us-west-2.amazonaws.com/wso2-stratos/wso2esb-${ESB_V
     mkdir /opt/artifacts
 
 COPY bin/wso2server.sh /opt/wso2esb-5.0.0/bin/wso2server.sh
-COPY lib/* /opt/wso2esb-5.0.0/repository/components/lib
+COPY lib/* /opt/wso2esb-5.0.0/repository/components/lib/
 COPY dropins/* /opt/wso2esb-5.0.0/repository/components/dropins/
 COPY artifacts/* /opt/artifacts/
 COPY carbonapps/* /opt/wso2esb-5.0.0/repository/deployment/server/carbonapps/
