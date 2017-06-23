@@ -19,17 +19,22 @@ The Dockerfile will:
 
 Clone this repo in your local.
 
-Build image:
+Use internal script in `scripts/`:
 
-```
-docker build -t serrodcal/wso2esb-5.0.0 .
-```
+* `./scripts/build.sh`
+* `./scripts/run.sh`
+* `./scripts/start.sh`
+* `./scripts/stop.sh`
+* `./scripts/clean.sh`
 
-To run the WSO2 ESB:
+Check permissions or make `chmod 775 scripts/<script_name>.sh`.
 
-```
-docker run -d --name esb -p 9443:9443 -p 8280:8280 -p 8243:8243 -p 19444:19444 serrodcal/wso2esb-5.0.0
-````
+Or, you can use this others:
+
+* Build image: `docker build -t serrodcal/wso2esb-5.0.0 .`
+
+* Run container: `docker run -d --name esb -p 9443:9443 -p 8280:8280 -p 8243:8243 -p 19444:19444 serrodcal/wso2esb-5.0.0`
+
 To access web admin console, navigate to `https://localhost:9443` using your web browser.
 
 To access OSGi Console, type `telnet localhost 19444` in console.
