@@ -1,6 +1,6 @@
 esb:
   build:
-    image: isim/wso2esb
+    image: serrodcal/wso2esb-5.0.0
     dockerfile: Dockerfile
     args:
       VCS_REF: 9b0545f
