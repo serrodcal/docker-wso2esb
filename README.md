@@ -11,7 +11,7 @@ The Dockerfile will:
 * Remove the ESB 5.0.0 ZIP.
 * Expose the container port `9443`, `9763`, `8243`, `8280`.
 * Set the `wso2server.sh` start-up script as the container start-up entrypoint.
-* Set osgiConsole
+* Set osgiConsole.
 * Be able to deploy mediators (in artifacts/), dropins and libs.
 * Be able to deploy Carbon Apps.
 
