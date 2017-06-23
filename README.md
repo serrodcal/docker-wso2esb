@@ -13,6 +13,7 @@ The Dockerfile will:
 * Set the `wso2server.sh` start-up script as the container start-up entrypoint.
 * Set osgiConsole
 * Be able to deploy mediators (in artifacts/), dropins and libs.
+* Be able to deploy Carbon Apps.
 
 ## Usage
 
@@ -37,7 +38,7 @@ To access OSGi Console, type `telnet localhost 19444` in console.
 
 Copy mediators `.jar` files into /artifacts, Apache Felix works for us.
 
-If you need dropins or libs for the mediator put them in dropins/ or lib/. 
+If you need dropins or libs for the mediator put them in dropins/ or lib/.
 
 ## License
 Refer to the [LICENSE](LICENSE) file. WSO2 license can be found [here](http://wso2.com/licenses).
