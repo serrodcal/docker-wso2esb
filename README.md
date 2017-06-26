@@ -26,6 +26,7 @@ Use internal script in `scripts/`:
 * `./scripts/start.sh`
 * `./scripts/stop.sh`
 * `./scripts/clean.sh`
+* `./scripts/terminal.sh`
 
 Check permissions or make `chmod 775 scripts/<script_name>.sh`.
 
