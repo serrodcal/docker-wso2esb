@@ -24,6 +24,7 @@ Use internal script in `scripts/`:
 * `./scripts/build.sh`
 * `./scripts/run.sh`
 * `./scripts/start.sh`
+* `./scripts/restart.sh`
 * `./scripts/stop.sh`
 * `./scripts/clean.sh`
 * `./scripts/terminal.sh`
